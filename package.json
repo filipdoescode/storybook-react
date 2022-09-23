@@ -27,6 +27,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o build/storybook",
+    "test-storybook": "test-storybook",
     "prepare": "husky install",
     "lint": "eslint --fix .",
     "prettier": "prettier --write .",
@@ -49,11 +50,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@storybook/addon-a11y": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.12",
     "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.9",
+    "@storybook/test-runner": "^0.7.2",
+    "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -75,16 +81,23 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.6.4",
     "husky": ">=6",
     "jest-axe": "^4.1.0",
     "jest-canvas-mock": "^2.3.1",
     "lint-staged": ">=10",
+    "msw": "^0.47.3",
+    "msw-storybook-addon": "^1.6.3",
     "prettier": "^2.5.0",
     "react-is": "^17.0.2",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "storybook-addon-designs": "^6.3.1"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix",
     "*.{html,md}": "prettier --write"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
